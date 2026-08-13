@@ -314,10 +314,10 @@ export default function Home() {
                 About Karthik Astrology
               </h2>
               <p className="text-gray-300 mb-4 leading-relaxed">
-                With over 5+ years of dedicated practice and study, Karthik Astrology represents a perfect blend of ancient Vedic wisdom and contemporary astrological knowledge. We believe that astrology is not merely about predicting the future—it's about empowering individuals to make informed decisions and live harmoniously with cosmic rhythms.
+                With over 5+ years of dedicated practice and study, Karthik Astrology represents a perfect blend of ancient Vedic wisdom and contemporary astrological knowledge. We believe that astrology is not merely about predicting the future—it&apos;s about empowering individuals to make informed decisions and live harmoniously with cosmic rhythms.
               </p>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Our expert astrologers have helped over 200 clients navigate life's challenges and unlock their true potential. We provide personalized guidance through birth chart analysis, horoscope readings, numerological insights, and spiritual remedies including authentic gemstone recommendations.
+                Our expert astrologers have helped over 200 clients navigate life&apos;s challenges and unlock their true potential. We provide personalized guidance through birth chart analysis, horoscope readings, numerological insights, and spiritual remedies including authentic gemstone recommendations.
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">

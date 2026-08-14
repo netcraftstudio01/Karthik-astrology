@@ -22,7 +22,7 @@ export default function Home() {
             className="mx-auto mb-8 rounded-full border-4 border-[#FEBD14]/30 shadow-lg"
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
-            Welcome to Shree Karthik Science of Astrology
+           Welcome to <br/> Shree Karthik <br/> Science of Astrology
           </h1>
           <p className="text-xl md:text-2xl text-slate-700 mb-8 leading-relaxed">
             Unlock the mysteries of the cosmos and discover your true path. Our expert astrologers combine ancient wisdom with modern understanding to guide you toward a better future.

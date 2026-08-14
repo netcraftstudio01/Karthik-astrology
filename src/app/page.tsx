@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <main className="bg-[#fffaf5]">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-to-b from-[#fff8e5] via-white to-white relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#FEBD14]/25 rounded-full blur-3xl opacity-80"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#FEBD14]/15 rounded-full blur-3xl opacity-70"></div>
+      <section className="min-h-screen flex items-center justify-center pt-40 md:pt-20 px-4 bg-gradient-to-b from-[#fff8e5] via-white to-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -left-40 w-96 h-96 bg-[#FEBD14]/25 rounded-full blur-3xl opacity-80"></div>
+          <div className="absolute top-full -right-40 w-96 h-96 bg-[#FEBD14]/15 rounded-full blur-3xl opacity-70"></div>
         </div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto">
@@ -19,10 +19,10 @@ export default function Home() {
             alt="Shree Karthik Science of Astrology Logo"
             width={120}
             height={120}
-            className="mx-auto mb-8 rounded-full border-4 border-[#FEBD14]/30 shadow-lg"
+            className="mx-auto mb-8 md:mb-8 rounded-full border-4 border-[#FEBD14]/30 shadow-lg"
           />
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
-           Welcome to <br/> Shree Karthik <br/> Science of Astrology
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-6 gradient-text leading-tight">
+           Welcome to <br /> Shree Karthik <br /> Science of Astrology
           </h1>
           <p className="text-xl md:text-2xl text-slate-700 mb-8 leading-relaxed">
             Unlock the mysteries of the cosmos and discover your true path. Our expert astrologers combine ancient wisdom with modern understanding to guide you toward a better future.

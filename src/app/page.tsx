@@ -5,31 +5,31 @@ import logo from '@/logo.png'
 
 export default function Home() {
   return (
-    <main className="bg-midnight">
+    <main className="bg-[#fffaf5]">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-to-b from-deep-purple via-midnight to-midnight relative overflow-hidden">
+      <section className="min-h-screen flex items-center justify-center pt-20 px-4 bg-gradient-to-b from-[#fff8e5] via-white to-white relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl opacity-20"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl opacity-20"></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#FEBD14]/25 rounded-full blur-3xl opacity-80"></div>
+          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#FEBD14]/15 rounded-full blur-3xl opacity-70"></div>
         </div>
         
         <div className="relative z-10 text-center max-w-4xl mx-auto">
           <Image
             src={logo}
-            alt="Karthik Astrology Logo"
+            alt="Shree Karthik Science of Astrology Logo"
             width={120}
             height={120}
-            className="mx-auto mb-8 rounded-full"
+            className="mx-auto mb-8 rounded-full border-4 border-[#FEBD14]/30 shadow-lg"
           />
           <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-text">
-            Welcome to Karthik Astrology
+            Welcome to Shree Karthik Science of Astrology
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-slate-700 mb-8 leading-relaxed">
             Unlock the mysteries of the cosmos and discover your true path. Our expert astrologers combine ancient wisdom with modern understanding to guide you toward a better future.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-gold">Book Consultation</button>
-            <button className="btn-outline">Learn More</button>
+            <a href="#contact" className="btn-gold inline-flex items-center justify-center">Book Consultation</a>
+            <a href="#about" className="btn-outline inline-flex items-center justify-center">Learn More</a>
           </div>
           
           <div className="mt-16 grid grid-cols-3 gap-4 md:gap-8 text-center">
@@ -50,12 +50,12 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 bg-midnight">
+      <section id="services" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
             Our Services
           </h2>
-          <p className="text-gray-400 text-center mb-16 text-lg">
+          <p className="text-slate-600 text-center mb-16 text-lg">
             Comprehensive astrological guidance for every aspect of your life
           </p>
 
@@ -154,12 +154,12 @@ export default function Home() {
       </section>
 
       {/* Gemstones Section */}
-      <section id="gemstones" className="py-20 px-4 bg-gradient-to-b from-midnight to-deep-purple/30">
+      <section id="gemstones" className="py-20 px-4 bg-gradient-to-b from-white to-[#fff8e5]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
             Precious Gemstones
           </h2>
-          <p className="text-gray-400 text-center mb-16 text-lg">
+          <p className="text-slate-600 text-center mb-16 text-lg">
             Harness planetary energies through authentic gemstones
           </p>
 
@@ -306,17 +306,17 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-4 bg-midnight">
+      <section id="about" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-                About Karthik Astrology
+                About Shree Karthik Science of Astrology
               </h2>
-              <p className="text-gray-300 mb-4 leading-relaxed">
-                With over 5+ years of dedicated practice and study, Karthik Astrology represents a perfect blend of ancient Vedic wisdom and contemporary astrological knowledge. We believe that astrology is not merely about predicting the future—it&apos;s about empowering individuals to make informed decisions and live harmoniously with cosmic rhythms.
+              <p className="text-slate-700 mb-4 leading-relaxed">
+                With over 5+ years of dedicated practice and study, Shree Karthik Science of Astrology represents a perfect blend of ancient Vedic wisdom and contemporary astrological knowledge. We believe that astrology is not merely about predicting the future—it&apos;s about empowering individuals to make informed decisions and live harmoniously with cosmic rhythms.
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-slate-700 mb-6 leading-relaxed">
                 Our expert astrologers have helped over 200 clients navigate life&apos;s challenges and unlock their true potential. We provide personalized guidance through birth chart analysis, horoscope readings, numerological insights, and spiritual remedies including authentic gemstone recommendations.
               </p>
               <div className="space-y-3">
@@ -338,11 +338,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-gold/20 to-purple-600/20 rounded-lg p-8 h-96 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-[#fff3cd] to-[#feeb9c] rounded-lg p-8 h-96 flex items-center justify-center shadow-md">
               <div className="text-center">
                 <p className="text-7xl mb-4">🌟</p>
-                <h3 className="text-3xl font-bold text-gold mb-2">Cosmic Guidance</h3>
-                <p className="text-gray-300">Aligning your life with celestial wisdom</p>
+                <h3 className="text-3xl font-bold text-[#A67400] mb-2">Cosmic Guidance</h3>
+                <p className="text-slate-700">Aligning your life with celestial wisdom</p>
               </div>
             </div>
           </div>
@@ -350,12 +350,12 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-gradient-to-b from-midnight to-deep-purple">
+      <section id="contact" className="py-20 px-4 bg-gradient-to-b from-[#fff8e5] to-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 gradient-text">
             Get in Touch
           </h2>
-          <p className="text-gray-400 text-center mb-12 text-lg">
+          <p className="text-slate-600 text-center mb-12 text-lg">
             Ready to start your astrological journey? Connect with us today.
           </p>
 
@@ -391,11 +391,18 @@ export default function Home() {
                   className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
                 />
               </div>
-              <input
-                type="text"
-                placeholder="Subject"
-                className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
-              />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input
+                  type="tel"
+                  placeholder="Mobile Number"
+                  className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+                />
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
+                />
+              </div>
               <textarea
                 placeholder="Your Message"
                 rows={6}

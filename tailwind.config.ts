@@ -9,10 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'gold': '#D4AF37',
-        'deep-purple': '#2D1B4E',
-        'midnight': '#0F0A1E',
-        'sage': '#9B8C7C',
+        'gold': '#FEBD14',
+        'deep-purple': '#fff8e5',
+        'midnight': '#fffdf7',
+        'sage': '#d39a00',
       },
     },
   },

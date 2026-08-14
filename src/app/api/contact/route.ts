@@ -8,10 +8,10 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { name, email, subject, message } = body
+    const { name, email, mobile, subject, message } = body
 
     // Validation
-    if (!name || !email || !subject || !message) {
+    if (!name || !email || !mobile || !subject || !message) {
       return NextResponse.json(
         { error: 'All fields are required' },
         { status: 400 }
@@ -23,6 +23,14 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: 'Invalid email format' },
+        { status: 400 }
+      )
+    }
+
+    const mobileRegex = /^[0-9+()\-\s]{10,15}$/
+    if (!mobileRegex.test(mobile)) {
+      return NextResponse.json(
+        { error: 'Invalid mobile number format' },
         { status: 400 }
       )
     }
@@ -58,7 +66,7 @@ export async function POST(request: NextRequest) {
       from: 'noreply@karthikastrology.com',
       subject: 'We received your message',
       html: `
-        <h2>Thank you for contacting Karthik Astrology</h2>
+        <h2>Thank you for contacting Shree Karthik Science of Astrology</h2>
         <p>We have received your message and will get back to you soon.</p>
         <p>Your message: ${message}</p>
       `,
@@ -70,7 +78,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       { 
         message: 'Message received successfully! We will contact you soon.',
-        data: { name, email, subject }
+        data: { name, email, mobile, subject }
       },
       { status: 200 }
     )

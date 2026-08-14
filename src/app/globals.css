@@ -14,30 +14,51 @@ html {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, #fffdf7 0%, #fffaf0 100%);
+  color: #1f2937;
 }
+
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-gray-100,
+.text-gray-200 {
+  transition: color 0.2s ease;
+}
+
+.text-gray-300 { color: #475569 !important; }
+.text-gray-400 { color: #64748b !important; }
+.text-gray-500 { color: #475569 !important; }
+.text-gray-600 { color: #334155 !important; }
+.text-gray-700 { color: #1f2937 !important; }
+.text-gray-100 { color: #1f2937 !important; }
+.text-gray-200 { color: #334155 !important; }
 
 /* Custom components */
 .gradient-text {
-  background: linear-gradient(135deg, #D4AF37 0%, #F5DEB3 100%);
+  background: linear-gradient(135deg, #FEBD14 0%, #f7d86b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .card-glass {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(254, 189, 20, 0.25);
+  box-shadow: 0 12px 35px rgba(254, 189, 20, 0.08);
 }
 
 .service-card {
-  @apply p-6 rounded-lg card-glass hover:shadow-2xl hover:shadow-gold/20 transition-all duration-300 transform hover:-translate-y-2;
+  @apply p-6 rounded-lg card-glass hover:shadow-2xl hover:shadow-yellow-200 transition-all duration-300 transform hover:-translate-y-2;
 }
 
 .btn-gold {
-  @apply px-6 py-3 bg-gold text-midnight font-semibold rounded-lg hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105;
+  @apply px-6 py-3 bg-gold text-white font-semibold rounded-lg hover:bg-[#e6a900] transition-all duration-300 transform hover:scale-105;
 }
 
 .btn-outline {
-  @apply px-6 py-3 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-midnight transition-all duration-300;
+  @apply px-6 py-3 border-2 border-gold text-gold font-semibold rounded-lg hover:bg-gold hover:text-white transition-all duration-300;
 }

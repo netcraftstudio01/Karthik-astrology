@@ -52,7 +52,7 @@ export const ZODIAC_SIGNS = [
 
 export const CONTACT_INFO = {
   EMAIL: 'info@karthikastrology.com',
-  PHONE: '+91 (000) 000-0000',
+  PHONE: '+91 96553 75550',
   ADDRESS: 'Your City, Country',
 } as const
 

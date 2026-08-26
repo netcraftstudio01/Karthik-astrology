@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function GemstoneCard({
   name,
   color,
@@ -14,7 +16,13 @@ export default function GemstoneCard({
   return (
     <div className="card-glass rounded-lg overflow-hidden group hover:shadow-2xl hover:shadow-gold/30 transition-all duration-300">
       <div className="relative h-48 bg-gradient-to-br from-gold/20 to-transparent flex items-center justify-center">
-        <div className="text-8xl">{image}</div>
+        <Image
+          src={image}
+          alt={`${name} gemstone`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
       </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold gradient-text mb-2">{name}</h3>

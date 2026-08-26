@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export const metadata: Metadata = {
   title: 'Shree Karthik Science of Astrology - Professional Astrology Services',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   )

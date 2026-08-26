@@ -1,5 +1,7 @@
 import ServiceCard from '@/components/ServiceCard'
 import GemstoneCard from '@/components/GemstoneCard'
+import MonthlyPrediction from '@/components/MonthlyPrediction'
+import AstrologyClock from '@/components/AstrologyClock'
 import Image from 'next/image'
 import logo from '@/logo.png'
 
@@ -48,6 +50,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <AstrologyClock />
 
       {/* Services Section */}
       <section id="services" className="py-20 px-4 bg-white">
@@ -174,7 +178,7 @@ export default function Home() {
                 'Improves overall health',
                 'Success in career and business'
               ]}
-              image="💎"
+              image="/images/gemstones/ruby.svg"
             />
 
             <GemstoneCard
@@ -187,7 +191,7 @@ export default function Home() {
                 'Improves sleep quality',
                 'Strengthens relationships'
               ]}
-              image="🌊"
+              image="/images/gemstones/pearl.svg"
             />
 
             <GemstoneCard
@@ -200,7 +204,7 @@ export default function Home() {
                 'Success in business dealings',
                 'Strengthens family bonds'
               ]}
-              image="💚"
+              image="/images/gemstones/emerald.svg"
             />
 
             <GemstoneCard
@@ -213,7 +217,7 @@ export default function Home() {
                 'Success in education',
                 'Improves overall fortune'
               ]}
-              image="⭐"
+              image="/images/gemstones/yellow-sapphire.svg"
             />
 
             <GemstoneCard
@@ -226,7 +230,7 @@ export default function Home() {
                 'Increases focus and discipline',
                 'Brings justice and fair dealing'
               ]}
-              image="💙"
+              image="/images/gemstones/blue-sapphire.svg"
             />
 
             <GemstoneCard
@@ -239,7 +243,7 @@ export default function Home() {
                 'Success in competitive fields',
                 'Protects from accidents'
               ]}
-              image="🔴"
+              image="/images/gemstones/red-coral.svg"
             />
 
             <GemstoneCard
@@ -252,7 +256,7 @@ export default function Home() {
                 'Brings luxury and comfort',
                 'Strengthens feminine energy'
               ]}
-              image="✨"
+              image="/images/gemstones/diamond.svg"
             />
 
             <GemstoneCard
@@ -265,7 +269,7 @@ export default function Home() {
                 'Success in foreign travels',
                 'Overcoming obsessions'
               ]}
-              image="🟤"
+              image="/images/gemstones/hessonite.svg"
             />
 
             <GemstoneCard
@@ -278,7 +282,7 @@ export default function Home() {
                 'Success in hidden ventures',
                 'Increases intuitive powers'
               ]}
-              image="👁️"
+              image="/images/gemstones/cats-eye.svg"
             />
           </div>
 
@@ -304,6 +308,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <MonthlyPrediction />
 
       {/* About Section */}
       <section id="about" className="py-20 px-4 bg-white">
@@ -360,16 +366,16 @@ export default function Home() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="card-glass p-6 rounded-lg text-center">
+            <a href="mailto:info@karthikastrology.com" className="card-glass p-6 rounded-lg text-center hover:shadow-xl transition-shadow">
               <p className="text-4xl mb-4">📧</p>
               <h3 className="text-xl font-semibold text-gold mb-2">Email</h3>
               <p className="text-gray-300">info@karthikastrology.com</p>
-            </div>
-            <div className="card-glass p-6 rounded-lg text-center">
+            </a>
+            <a href="https://wa.me/919655375550?text=Hello%20Shree%20Karthik%20Science%20of%20Astrology" target="_blank" rel="noopener noreferrer" className="card-glass p-6 rounded-lg text-center hover:shadow-xl transition-shadow">
               <p className="text-4xl mb-4">📱</p>
-              <h3 className="text-xl font-semibold text-gold mb-2">Phone</h3>
+              <h3 className="text-xl font-semibold text-gold mb-2">WhatsApp</h3>
               <p className="text-gray-300">+91 96553 75550</p>
-            </div>
+            </a>
             <div className="card-glass p-6 rounded-lg text-center">
               <p className="text-4xl mb-4">📍</p>
               <h3 className="text-xl font-semibold text-gold mb-2">Location</h3>
@@ -377,39 +383,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="card-glass rounded-lg p-8">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  type="text"
-                  placeholder="Your Name"
-                  className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
-                />
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input
-                  type="tel"
-                  placeholder="Mobile Number"
-                  className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
-                />
-                <input
-                  type="text"
-                  placeholder="Subject"
-                  className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold"
-                />
-              </div>
-              <textarea
-                placeholder="Your Message"
-                rows={6}
-                className="w-full bg-black/30 border border-gold/30 rounded-lg px-4 py-3 text-gray-300 placeholder-gray-500 focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold resize-none"
-              ></textarea>
-              <button type="submit" className="btn-gold w-full">Send Message</button>
-            </form>
+          <div className="card-glass rounded-lg p-8 text-center">
+            <h3 className="text-2xl font-bold text-gold mb-3">Chat with us on WhatsApp</h3>
+            <p className="text-gray-300 mb-6">Get personal guidance about consultations, predictions, and gemstones.</p>
+            <a href="https://wa.me/919655375550?text=Hello%20Shree%20Karthik%20Science%20of%20Astrology" target="_blank" rel="noopener noreferrer" className="btn-gold inline-flex items-center justify-center">
+              Start WhatsApp Chat
+            </a>
           </div>
         </div>
       </section>

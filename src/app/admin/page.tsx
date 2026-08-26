@@ -1,6 +1,6 @@
 'use client'
 
-import { FormEvent, useEffect, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import type { MonthlyPrediction } from '@/lib/monthlyPrediction'
 
 const emptyPrediction: MonthlyPrediction = {
@@ -18,15 +18,6 @@ export default function AdminPage() {
   const [prediction, setPrediction] = useState(emptyPrediction)
   const [authenticated, setAuthenticated] = useState(false)
   const [status, setStatus] = useState('')
-
-  useEffect(() => {
-    fetch('/api/admin/prediction').then((response) => {
-      if (response.ok) {
-        setAuthenticated(true)
-        response.json().then(setPrediction)
-      }
-    })
-  }, [])
 
   async function login(event: FormEvent) {
     event.preventDefault()

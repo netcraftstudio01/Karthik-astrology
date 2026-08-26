@@ -56,13 +56,13 @@ function getClockState(): ClockState {
 function polarPoint(angle: number, radius: number) {
   const radians = (angle - 90) * (Math.PI / 180)
   return {
-    x: 50 + Math.cos(radians) * radius,
-    y: 50 + Math.sin(radians) * radius,
+    x: Number((50 + Math.cos(radians) * radius).toFixed(3)),
+    y: Number((50 + Math.sin(radians) * radius).toFixed(3)),
   }
 }
 
 export default function AstrologyClock() {
-  const [clock, setClock] = useState<ClockState>(getClockState)
+  const [clock, setClock] = useState<ClockState | null>(null)
 
   useEffect(() => {
     const updateClock = () => setClock(getClockState())
@@ -71,17 +71,21 @@ export default function AstrologyClock() {
     return () => window.clearInterval(interval)
   }, [])
 
-  const hourAngle = ((clock.hours % 12) + clock.minutes / 60) * 30
-  const minuteAngle = (clock.minutes + clock.seconds / 60) * 6
-  const secondAngle = clock.seconds * 6
-  const timeLabel = clock.date.toLocaleTimeString('en-IN', {
-    timeZone: INDIA_TIME_ZONE,
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    hour12: true,
-  })
-  const dateLabel = clock.date.toLocaleDateString('en-IN', { timeZone: INDIA_TIME_ZONE, weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
+  const hourAngle = clock ? ((clock.hours % 12) + clock.minutes / 60) * 30 : 0
+  const minuteAngle = clock ? (clock.minutes + clock.seconds / 60) * 6 : 0
+  const secondAngle = clock ? clock.seconds * 6 : 0
+  const timeLabel = clock
+    ? clock.date.toLocaleTimeString('en-IN', {
+        timeZone: INDIA_TIME_ZONE,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+      })
+    : 'Indian Standard Time'
+  const dateLabel = clock
+    ? clock.date.toLocaleDateString('en-IN', { timeZone: INDIA_TIME_ZONE, weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })
+    : 'Indian Standard Time (IST)'
 
   return (
     <section className="astrology-clock-section" aria-labelledby="astrology-clock-title">
@@ -95,7 +99,7 @@ export default function AstrologyClock() {
 
           <div className="astrology-clock-face-wrap">
             <div className="astrology-clock-time" aria-live="polite" suppressHydrationWarning>{timeLabel} IST</div>
-            <svg className="astrology-clock-face" viewBox="0 0 100 100" role="img" aria-label={`Astrology clock showing ${timeLabel} Indian Standard Time`} suppressHydrationWarning>
+            <svg className="astrology-clock-face" viewBox="0 0 100 100" role="img" aria-label={`Astrology clock showing ${timeLabel} Indian Standard Time`}>
               <circle cx="50" cy="50" r="47" className="clock-outer-ring" />
               <circle cx="50" cy="50" r="42" className="clock-zodiac-ring" />
               <circle cx="50" cy="50" r="28" className="clock-inner-ring" />
@@ -113,7 +117,7 @@ export default function AstrologyClock() {
                 <line key={index} x1="50" y1="15" x2="50" y2="18" className="clock-hour-tick" transform={`rotate(${index * 30} 50 50)`} />
               ))}
               {planets.map((planet) => {
-                const point = polarPoint(clock.seconds * 0.15 + planet.offset, planet.orbit)
+                const point = polarPoint((clock?.seconds ?? 0) * 0.15 + planet.offset, planet.orbit)
                 return (
                   <g key={planet.name}>
                     <circle cx={point.x} cy={point.y} r="2.5" fill={planet.color} className="clock-planet" />

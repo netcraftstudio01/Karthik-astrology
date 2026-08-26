@@ -178,7 +178,7 @@ export default function Home() {
                 'Improves overall health',
                 'Success in career and business'
               ]}
-              image="/images/gemstones/ruby.svg"
+              image="/images/gemstones/ruby.jpg"
             />
 
             <GemstoneCard
@@ -191,7 +191,7 @@ export default function Home() {
                 'Improves sleep quality',
                 'Strengthens relationships'
               ]}
-              image="/images/gemstones/pearl.svg"
+              image="/images/gemstones/pearl.jpg"
             />
 
             <GemstoneCard
@@ -204,7 +204,7 @@ export default function Home() {
                 'Success in business dealings',
                 'Strengthens family bonds'
               ]}
-              image="/images/gemstones/emerald.svg"
+              image="/images/gemstones/emerald.jpg"
             />
 
             <GemstoneCard
@@ -217,7 +217,7 @@ export default function Home() {
                 'Success in education',
                 'Improves overall fortune'
               ]}
-              image="/images/gemstones/yellow-sapphire.svg"
+              image="/images/gemstones/yellow-sapphire.jpg"
             />
 
             <GemstoneCard
@@ -230,7 +230,7 @@ export default function Home() {
                 'Increases focus and discipline',
                 'Brings justice and fair dealing'
               ]}
-              image="/images/gemstones/blue-sapphire.svg"
+              image="/images/gemstones/blue-sapphire.jpg"
             />
 
             <GemstoneCard
@@ -243,7 +243,7 @@ export default function Home() {
                 'Success in competitive fields',
                 'Protects from accidents'
               ]}
-              image="/images/gemstones/red-coral.svg"
+              image="/images/gemstones/red-coral.jpg"
             />
 
             <GemstoneCard
@@ -256,7 +256,7 @@ export default function Home() {
                 'Brings luxury and comfort',
                 'Strengthens feminine energy'
               ]}
-              image="/images/gemstones/diamond.svg"
+              image="/images/gemstones/diamond.jpg"
             />
 
             <GemstoneCard
@@ -269,11 +269,11 @@ export default function Home() {
                 'Success in foreign travels',
                 'Overcoming obsessions'
               ]}
-              image="/images/gemstones/hessonite.svg"
+              image="/images/gemstones/hessonite.jpg"
             />
 
             <GemstoneCard
-              name="Cat\'s Eye"
+              name="Cats Eye"
               color="Greenish-Yellow"
               planet="Ketu"
               benefits={[
@@ -282,7 +282,7 @@ export default function Home() {
                 'Success in hidden ventures',
                 'Increases intuitive powers'
               ]}
-              image="/images/gemstones/cats-eye.svg"
+              image="/images/gemstones/cats-eye.jpg"
             />
           </div>
 

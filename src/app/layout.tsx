@@ -7,6 +7,9 @@ import WhatsAppButton from '@/components/WhatsAppButton'
 export const metadata: Metadata = {
   title: 'Shree Karthik Science of Astrology - Professional Astrology Services',
   description: 'Expert astrology services including birth charts, horoscopes, numerology, gemstones, and Vastu consultation.',
+  icons: {
+    icon: '/icon.svg',
+  },
 }
 
 export default function RootLayout({
